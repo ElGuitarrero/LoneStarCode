@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import Link from "next/link"
+
 
 interface Opcion { 
     label: string
@@ -12,38 +13,39 @@ interface NavbarProps {
 }
 
 const NavBar = ( {behavior}: NavbarProps ) => {
-    const [x, setX] = useState<string>("")
     
-    useEffect(() => {
-        setX(String(behavior))
-    })
 
     const opciones:Opcion[] = [
         {
             label: "Home",
-            link: "#",
+            link: "/",
         },
         {
-            label: "Proyectos",
-            link: "#"
+            label: "Projects",
+            link: "/projects"
+        },
+        {
+            label: "Pricing",
+            link: "/pricing"
         },
         {
             label: "About",
-            link: "#"
+            link: "/about"
         },
         {
             label: "Contact",
-            link: "#"
+            link: "/contact"
         }
     ]
 
     return (
         <nav className={`text-black ${behavior ? "fixed w-full sm:w-[75%] bg-stone-100" : "sticky w-full bg-stone-100"} top-0 z-50 `} style={{ fontFamily: 'var(--font-inter)' }}>
             {/* Opciones */}
-            <ul className="flex flex-row justify-evenly px-3 py-2">
+            <ul className="flex flex-row justify-evenly px-3">
                 {
                     opciones.map((opcion, index) => (
-                        <li key={index} className="p-2 ">{opcion.label}</li>
+                        <Link href={opcion.link} key={index} className="py-4 px-2 sm:px-8 hover:inset-shadow-sm hover:outline transition duration-300">{opcion.label}</Link>
+                        // <li key={index} className="p-2 ">{opcion.label}</li>
                     ))
                 }
             </ul>
