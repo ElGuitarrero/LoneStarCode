@@ -18,7 +18,7 @@ export default function ServicesSection() {
 					help your business grow.
 				</p>
 
-				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
 					{/* Service 1 */}
 					<FadeInSection>
 						<div className="h-full flex flex-col items-center p-6 border hover:border-yellow-600 rounded-2xl shadow hover:shadow-lg transition">
@@ -43,6 +43,19 @@ export default function ServicesSection() {
 							<p className="text-gray-600 text-sm">
 								Ensure your website looks great and performs
 								perfectly on all devices.
+							</p>
+						</div>
+					</FadeInSection>
+					{/* Service 5 */}
+					<FadeInSection>
+						<div className="h-full flex flex-col items-center p-6 border hover:border-yellow-600 rounded-2xl shadow hover:shadow-lg transition">
+							<FaLaptopCode className="text-yellow-600 text-5xl mb-4" />
+							<h3 className="text-xl font-semibold mb-2 text-black">
+								AI Solutions
+							</h3>
+							<p className="text-gray-600 text-sm text-center">
+								Automate tasks and enhance customer experiences
+								with smart, easy-to-use AI.
 							</p>
 						</div>
 					</FadeInSection>

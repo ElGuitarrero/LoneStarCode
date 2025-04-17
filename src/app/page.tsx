@@ -3,6 +3,8 @@
 import FadeInSection from "@/components/FadeInSection";
 import Ejemplos from "@/components/Ejemplos";
 import ServicesSection from "@/components/ServicesSection";
+import Link from "next/link";
+import FaqSection from "@/components/FaqSection";
 
 const Home = () => {
 	return (
@@ -12,6 +14,7 @@ const Home = () => {
 			<div className="bg-stone-100">
 				<Ejemplos />
 			</div>
+			<FaqSection />
 		</div>
 	);
 };
@@ -23,21 +26,23 @@ const HeroSection = () => {
 				<div className="text-center max-w-4xl">
 					<FadeInSection>
 						<h2 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
-							Empowering Your Vision, Elevating Your Business
+							Turning Your Vision Into Reality, One Project at a
+							Time
 						</h2>
 					</FadeInSection>
 
 					<FadeInSection>
 						<p className="mt-4 text-lg sm:text-xl text-white font-semibold drop-shadow-md">
-							Let us help you bring your ideas to life with
-							innovative solutions and professional expertise.
+							Custom websites and digital solutions designed to
+							grow your business and bring your ideas to life.
 						</p>
 					</FadeInSection>
-
 					<FadeInSection>
-						<button className="mt-6 px-8 py-3 bg-blue-300 text-black text-lg font-medium rounded-lg shadow-lg hover:bg-blue-700 hover:text-white cursor-pointer transition duration-300">
-							Share Your Vision
-						</button>
+						<Link href={"/contact"}>
+							<button className="mt-6 px-8 py-3 bg-blue-300 text-black text-lg font-medium rounded-lg shadow-lg hover:bg-blue-700 hover:text-white cursor-pointer transition duration-300">
+								Share Your Vision
+							</button>
+						</Link>
 					</FadeInSection>
 				</div>
 			</div>

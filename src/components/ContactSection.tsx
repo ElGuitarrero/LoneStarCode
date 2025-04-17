@@ -1,6 +1,9 @@
 // components/ContactSection.tsx
 
 export default function ContactSection() {
+
+
+
 	return (
 		<section className="bg-stone-100 pt-10 pb-16" id="contact">
 			<div className="max-w-2xl mx-auto px-4 text-center">
@@ -8,7 +11,8 @@ export default function ContactSection() {
 					Get in Touch
 				</h2>
 				<p className="text-gray-600 mb-8">
-					We would love to hear about your project! Fill out the form and we will get back to you soon.
+					We would love to hear about your project! Fill out the form
+					and we will get back to you soon.
 				</p>
 
 				<form
@@ -53,10 +57,16 @@ export default function ContactSection() {
 							className="max-sm:h-13 bg-stone-100 w-full p-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
 						>
 							<option value="">Select a Service</option>
-							<option value="Website Design">Website Design</option>
+							<option value="Website Design">
+								Website Design
+							</option>
 							<option value="E-commerce">E-commerce</option>
-							<option value="SEO Optimization">SEO Optimization</option>
-							<option value="Custom Project">Custom Project</option>
+							<option value="SEO Optimization">
+								SEO Optimization
+							</option>
+							<option value="Custom Project">
+								Custom Project
+							</option>
 							<option value="Other">Other</option>
 						</select>
 					</div>
@@ -70,7 +80,9 @@ export default function ContactSection() {
 							<option value="">Select a Package</option>
 							<option value="Basic">Basic - $299</option>
 							<option value="Standard">Standard - $899</option>
-							<option value="Premium">Premium - Custom Quote</option>
+							<option value="Premium">
+								Premium - Custom Quote
+							</option>
 						</select>
 					</div>
 
@@ -90,6 +102,16 @@ export default function ContactSection() {
 					>
 						Send Message
 					</button>
+
+					<div className="mt-6 text-sm text-gray-600">
+						Or email us at{" "}
+						<a
+							href="mailto:info@lonestarcode.org"
+							className="text-yellow-600 hover:underline"
+						>
+							info@lonestarcode.org
+						</a>
+					</div>
 				</form>
 			</div>
 		</section>
