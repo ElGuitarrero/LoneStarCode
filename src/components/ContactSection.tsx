@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function ContactSection() {
 	interface ContactFormData {
@@ -40,7 +41,12 @@ export default function ContactSection() {
 			});
 
 			if (response.ok) {
-				alert("Your message has been sent!");
+                Swal.fire({
+                    title: "Success!",
+                    text: "Your message has been sent!",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                });
 				setFormData({
 					name: "",
 					cellphone: "",
@@ -50,11 +56,21 @@ export default function ContactSection() {
 					message: "",
 				});
 			} else {
-				alert("Something went wrong. Please try again.");
+                Swal.fire({
+                    title: "Error",
+                    text: "Something went wrong. Please try again.",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                });
 			}
 		} catch (error) {
 			console.error(error);
-			alert("An error occurred. Please try again.");
+            Swal.fire({
+                title: "Error",
+                text: "An error occurred. Please try again.",
+                icon: "error",
+                confirmButtonText: "OK",
+            });
 		}
 	};
 
