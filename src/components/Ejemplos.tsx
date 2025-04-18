@@ -12,21 +12,21 @@ interface Ejemplo {
 const ejemplos: Ejemplo[] = [
 	{
 		titulo: "Daniel Etienne Website",
-		imagen: "/images/projects/daniel.png",
+		imagen: "/images/projects/daniel.webp",
 		descripcion:
 			"We create sleek, high-performance websites that elevate your brand, drive engagement, and increase bookings, just like we did for Daniel Etienne.",
 		link: "https://www.danieletienne.com/",
 	},
 	{
 		titulo: "Oracle Careers",
-		imagen: "/images/projects/oracle.png",
+		imagen: "/images/projects/oracle.webp",
 		descripcion:
 			"Our experience leading improvements on major platforms like Oracle Careers helps us design faster, smoother, and more user-friendly websites for businesses of any size.",
 		link: "https://www.oracle.com/careers/",
 	},
 	{
 		titulo: "True Texas Shine",
-		imagen: "/images/projects/texasshine.png",
+		imagen: "/images/projects/texasshine.webp",
 		descripcion:
 			"We help local businesses like True Texas Shine establish a strong, professional online presence that attracts new clients and grows brand trust.",
 		// link: "https://example.com/proyecto3"

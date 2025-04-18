@@ -21,7 +21,7 @@ const Home = () => {
 
 const HeroSection = () => {
 	return (
-		<section className="h-screen bg-[url('/images/fondo/fondoHero.png')] sm:bg-fixed bg-cover bg-center max-sm:mb-12">
+		<section className="h-screen bg-[url('/images/fondo/fondoHero.webp')] sm:bg-fixed bg-cover bg-center max-sm:mb-12">
 			<div className="backdrop-blur-md h-full w-full flex flex-col justify-center items-center px-6">
 				<div className="text-center max-w-4xl">
 					<FadeInSection>

@@ -22,7 +22,7 @@ function AboutSection() {
 			</div>
 
 			<div className="flex justify-center sm:w-1/2 w-full">
-				<div className="bg-[url('/images/fondo/trabajando.png')] bg-cover bg-center min-h-[300px] sm:min-h-[400px] w-full sm:w-[90%] rounded" />
+				<div className="bg-[url('/images/fondo/trabajando.webp')] bg-cover bg-center min-h-[300px] sm:min-h-[400px] w-full sm:w-[90%] rounded" />
 			</div>
 		</section>
 	);

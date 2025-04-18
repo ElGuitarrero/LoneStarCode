@@ -34,7 +34,7 @@ const Header = () => {
 						<div
 							className={`${
 								isSticky ? "w-10 h-10" : "w-40 h-40"
-							} bg-[url('/images/estrella.png')] bg-contain  rounded-full `}
+							} bg-[url('/images/estrella.webp')] bg-contain  rounded-full `}
 							style={{ animationDuration: "10s" }}
 						/>
 					</div>

@@ -2,7 +2,7 @@ import FadeInSection from "./FadeInSection";
 
 export default function MissionSection() {
 	return (
-		<section className="py-16 px-6 md:px-12 bg-[url('/images/fondo/mission.png')] lg:bg-fixed bg-cover bg-right md:bg-[center_70%] bg-stone-50 text-gray-800">
+		<section className="py-16 px-6 md:px-12 bg-[url('/images/fondo/mission.webp')] lg:bg-fixed bg-cover bg-right md:bg-[center_70%] bg-stone-50 text-gray-800">
 			<div className="max-w-5xl font-semibold sm:backdrop-blur-sm mx-auto p-6 rounded">
 				<FadeInSection>
 					<h2 className="text-3xl md:text-4xl font-bold mb-6">
