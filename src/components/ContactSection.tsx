@@ -1,29 +1,78 @@
-// components/ContactSection.tsx
+"use client";
+
+import { useState } from "react";
 
 export default function ContactSection() {
+	interface ContactFormData {
+		name: string;
+		cellphone: string;
+		email: string;
+		service: string;
+		package: string;
+		message: string;
+	}
 
+	const [formData, setFormData] = useState<ContactFormData>({
+		name: "",
+		cellphone: "",
+		email: "",
+		service: "",
+		package: "",
+		message: "",
+	});
 
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const sendContactForm = async (e: React.FormEvent) => {
+		e.preventDefault(); // evitar que se recargue la página
+		try {
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (response.ok) {
+				alert("Your message has been sent!");
+				setFormData({
+					name: "",
+					cellphone: "",
+					email: "",
+					service: "",
+					package: "",
+					message: "",
+				});
+			} else {
+				alert("Something went wrong. Please try again.");
+			}
+		} catch (error) {
+			console.error(error);
+			alert("An error occurred. Please try again.");
+		}
+	};
 
 	return (
 		<section className="bg-stone-100 pt-10 pb-16" id="contact">
 			<div className="max-w-2xl mx-auto px-4 text-center">
-				<h2 className="text-3xl font-bold mb-4 text-black">
-					Get in Touch
-				</h2>
+				<h2 className="text-3xl font-bold mb-4 text-black">Get in Touch</h2>
 				<p className="text-gray-600 mb-8">
-					We would love to hear about your project! Fill out the form
-					and we will get back to you soon.
+					We would love to hear about your project! Fill out the form and we will get back to you soon.
 				</p>
 
-				<form
-					action="https://formspree.io/f/{your_form_id}" // <-- reemplazar por tu endpoint
-					method="POST"
-					className="space-y-6 text-gray-500"
-				>
+				<form onSubmit={sendContactForm} className="space-y-6 text-gray-500">
 					<div>
 						<input
 							type="text"
 							name="name"
+							value={formData.name}
+							onChange={handleChange}
 							required
 							placeholder="Name"
 							className="w-full p-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-600"
@@ -34,6 +83,8 @@ export default function ContactSection() {
 						<input
 							type="tel"
 							name="cellphone"
+							value={formData.cellphone}
+							onChange={handleChange}
 							required
 							placeholder="Phone number"
 							className="w-full p-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-600"
@@ -44,29 +95,27 @@ export default function ContactSection() {
 						<input
 							type="email"
 							name="email"
+							value={formData.email}
+							onChange={handleChange}
 							required
 							placeholder="Email"
 							className="w-full p-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-600"
 						/>
 					</div>
 
-					<div className="">
+					<div>
 						<select
 							name="service"
+							value={formData.service}
+							onChange={handleChange}
 							required
-							className="max-sm:h-13 bg-stone-100 w-full p-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
+							className="max-sm:h-13 w-full p-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
 						>
 							<option value="">Select a Service</option>
-							<option value="Website Design">
-								Website Design
-							</option>
+							<option value="Website Design">Website Design</option>
 							<option value="E-commerce">E-commerce</option>
-							<option value="SEO Optimization">
-								SEO Optimization
-							</option>
-							<option value="Custom Project">
-								Custom Project
-							</option>
+							<option value="SEO Optimization">SEO Optimization</option>
+							<option value="Custom Project">Custom Project</option>
 							<option value="Other">Other</option>
 						</select>
 					</div>
@@ -74,15 +123,15 @@ export default function ContactSection() {
 					<div>
 						<select
 							name="package"
+							value={formData.package}
+							onChange={handleChange}
 							required
 							className="max-sm:h-13 w-full p-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
 						>
 							<option value="">Select a Package</option>
 							<option value="Basic">Basic - $299</option>
 							<option value="Standard">Standard - $899</option>
-							<option value="Premium">
-								Premium - Custom Quote
-							</option>
+							<option value="Premium">Premium - Custom Quote</option>
 						</select>
 					</div>
 
@@ -90,6 +139,8 @@ export default function ContactSection() {
 						<textarea
 							name="message"
 							rows={5}
+							value={formData.message}
+							onChange={handleChange}
 							required
 							placeholder="Your Message"
 							className="w-full p-3 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-600"
@@ -105,11 +156,8 @@ export default function ContactSection() {
 
 					<div className="mt-6 text-sm text-gray-600">
 						Or email us at{" "}
-						<a
-							href="mailto:info@lonestarcode.org"
-							className="text-yellow-600 hover:underline"
-						>
-							info@lonestarcode.org
+						<a href="mailto:info@lonestarcode.net" className="text-yellow-600 hover:underline">
+							info@lonestarcode.net
 						</a>
 					</div>
 				</form>

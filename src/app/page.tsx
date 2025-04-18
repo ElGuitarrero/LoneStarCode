@@ -26,15 +26,14 @@ const HeroSection = () => {
 				<div className="text-center max-w-4xl">
 					<FadeInSection>
 						<h2 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
-							Turning Your Vision Into Reality, One Project at a
-							Time
+							Real Custom Websites, No Templates Allowed
 						</h2>
 					</FadeInSection>
 
 					<FadeInSection>
 						<p className="mt-4 text-lg sm:text-xl text-white font-semibold drop-shadow-md">
-							Custom websites and digital solutions designed to
-							grow your business and bring your ideas to life.
+							We build everything from scratch to match your
+							vision - fast, modern, and truly yours.
 						</p>
 					</FadeInSection>
 					<FadeInSection>
