@@ -29,7 +29,7 @@ const ejemplos: Ejemplo[] = [
 		imagen: "/images/projects/texasshine.webp",
 		descripcion:
 			"We help local businesses like True Texas Shine establish a strong, professional online presence that attracts new clients and grows brand trust.",
-		// link: "https://example.com/proyecto3"
+		link: "https://true-texas-shine.vercel.app/"
 	},
 ];
 
