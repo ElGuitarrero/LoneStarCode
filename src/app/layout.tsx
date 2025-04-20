@@ -11,7 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: "LoneStar Code",
-	description: "Innovative software solutions tailored to drive your business forward.",
+	description:
+		"Innovative software solutions tailored to drive your business forward.",
 };
 
 export default function RootLayout({
@@ -21,12 +22,40 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<title>Web Design in Texas | Lone Star Code</title>
+				<meta
+					name="description"
+					content="Professional, custom websites built for small businesses in Texas. Fast, mobile-friendly, and affordable."
+				/>
+				<meta
+					name="keywords"
+					content="web design Richmond TX, texas website development, custom websites, small business websites"
+				/>
+				<meta name="author" content="Lone Star Code" />
+				<meta
+					property="og:title"
+					content="Lone Star Code — Custom Web Development"
+				/>
+				<meta
+					property="og:description"
+					content="We build custom websites for small businesses in Texas."
+				/>
+				<meta
+					property="og:image"
+					content="/images/social-preview.png"
+				/>
+				<meta
+					property="og:url"
+					content="https://www.lonestarcode.net"
+				/>
+				<meta name="twitter:card" content="summary_large_image" />
+			</head>
 			<body className={`${inter.variable} antialiased bg-stone-100`}>
-				
-        <header>
-          <Header/>
-        </header>
-        {/* <Header scrollY={typeof window !== "undefined" ? window.scrollY : 0}/> */}
+				<header>
+					<Header />
+				</header>
+				{/* <Header scrollY={typeof window !== "undefined" ? window.scrollY : 0}/> */}
 				{children}
 
 				<footer>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.lonestarcode.net
+
+# Sitemaps
+Sitemap: https://www.lonestarcode.net/sitemap.xml
