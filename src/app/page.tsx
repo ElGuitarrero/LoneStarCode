@@ -5,6 +5,7 @@ import Ejemplos from "@/components/Ejemplos";
 import ServicesSection from "@/components/ServicesSection";
 import Link from "next/link";
 import FaqSection from "@/components/FaqSection";
+import PricingSection from "@/components/PricingSection";
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			<div className="bg-stone-100">
 				<Ejemplos />
 			</div>
+			<PricingSection />
 			<FaqSection />
 		</div>
 	);
