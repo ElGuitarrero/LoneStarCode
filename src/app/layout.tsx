@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "LoneStar Code",
+	title: "Web Design & Digital Solutions in Texas | Lone Star Code",
 	description:
-		"Innovative software solutions tailored to drive your business forward.",
+		"Custom web design and digital solutions for small businesses in Texas. Fast, mobile-friendly, and made to help your brand grow online.",
 };
 
 export default function RootLayout({
